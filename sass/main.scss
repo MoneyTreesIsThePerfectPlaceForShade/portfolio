@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// #528747
+// #396f40
+// #818089
+// #dcc66f
+// #f7de7a
+//
+// #1f282c
+
+$background-color: #080404;
+$main-text-color: #f6b100;
+
+@mixin centeredTxt {
+    text-align: center;
+}
+
+@mixin line-top($top, $left, $height, $width) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    height: $height;
+    width: $width;
+    background-color: $main-text-color;
+}
+
+body {
+    margin: 40px 40px;
+    font-family: "Comfortaa", cursive;
+    background-color: $background-color;
+    color: $main-text-color;
+}
+
+.frame {
+    border: 5px solid $main-text-color;
+    // border-radius: 100px;
+    height: 500px;
+    width: 950px;
+
+    position: relative;
+}
+
+.name {
+    margin-top: 35px;
+    @include centeredTxt();
+}
+
+.line-top {
+    height: 4px;
+    width: 100px;
+    background-color: $main-text-color;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.line-top-2 {
+    @include line-top(40px, 225px, 4px, 250px);
+}
+
+.line-top-2-1 {
+    // $top, $left, $height, $width
+    @include line-top(40px, 475px, 30px, 4px);
+}
+
+.line-left {
+    height: 80px;
+    width: 4px;
+    background-color: $main-text-color;
+    margin-left: 40px;
+}
+
+.occupation {
+    margin-top: 30px;
+    @include centeredTxt();
+}
+
+.info {
+    position: absolute;
+    top: 25px;
+    left: 150px;
+}

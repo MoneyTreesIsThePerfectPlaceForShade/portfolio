@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "This is my portfolio",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoneyTreesIsThePerfectPlaceForShade/portfolio.git"
+  },
+  "author": "Matthew",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MoneyTreesIsThePerfectPlaceForShade/portfolio/issues"
+  },
+  "homepage": "https://github.com/MoneyTreesIsThePerfectPlaceForShade/portfolio#readme",
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
