@@ -247,8 +247,8 @@ body {
 }
 
 .flash-color {
-    font-weight: 700;
     font-style: normal;
+    font-weight: 700;
     color: lighten($color: $main-text-color, $amount: 15%);
 }
 
