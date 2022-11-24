@@ -151,10 +151,10 @@ body {
   background-color: #f6b100; }
 
 .line-left {
+  margin-left: 40px;
   height: 60px;
   width: 4px;
-  background-color: #f6b100;
-  margin-left: 40px; }
+  background-color: #f6b100; }
 
 .info {
   position: absolute;
