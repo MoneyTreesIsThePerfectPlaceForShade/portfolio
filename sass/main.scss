@@ -246,6 +246,12 @@ body {
     animation: colorPulse 5s infinite ease-in-out;
 }
 
+.flash-color {
+    font-weight: 700;
+    font-style: normal;
+    color: lighten($color: $main-text-color, $amount: 15%);
+}
+
 @keyframes colorPulse {
     0%,
     100% {

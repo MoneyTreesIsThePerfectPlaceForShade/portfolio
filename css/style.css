@@ -203,6 +203,11 @@ body {
   font-style: normal;
   animation: colorPulse 5s infinite ease-in-out; }
 
+.flash-color {
+  font-weight: 700;
+  font-style: normal;
+  color: #ffca44; }
+
 @keyframes colorPulse {
   0%,
   100% {
