@@ -14,8 +14,8 @@
 // #818089
 // #dcc66f
 // #f7de7a
-//
 // #1f282c
+// #20d1d6
 
 $background-color: #080404;
 $main-text-color: #f6b100;
@@ -43,15 +43,51 @@ body {
 .frame {
     border: 5px solid $main-text-color;
     // border-radius: 100px;
-    height: 500px;
+    height: 550px;
     width: 950px;
 
     position: relative;
 }
 
-.name {
-    margin-top: 35px;
-    @include centeredTxt();
+.grid {
+    display: grid;
+    grid-template-columns: 485px 1fr 1fr;
+    grid-template-rows: 120px 1fr 1fr;
+}
+
+.info-grid {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.main-info {
+    grid-column: 1/2;
+    grid-row: 2/4;
+    margin-left: 60px;
+}
+
+.exp-work {
+    grid-column: 2/3;
+    grid-row: 2/4;
+}
+
+.photo-section {
+    grid-column: 3/4;
+    grid-row: 2/3;
+
+    justify-self: center;
+    align-self: center;
+}
+
+.photo-margin {
+    margin-right: 30px;
+    border: 5px solid $main-text-color;
+    border-radius: 140px;
+}
+
+.info-under-photo {
+    grid-column: 3/4;
+    grid-row: 3/4;
 }
 
 .line-top {
@@ -71,20 +107,80 @@ body {
     @include line-top(40px, 475px, 30px, 4px);
 }
 
+.line-top-3 {
+    @include line-top(40px, 500px, 4px, 200px);
+}
+
+.line-top-3-1 {
+    @include line-top(40px, 700px, 30px, 4px);
+}
+
+.line-top-4 {
+    @include line-top(40px, 731px, 4px, 170px);
+    margin-right: 40px;
+}
+
+.line-top-4-1 {
+    @include line-top(40px, 900px, 30px, 4px);
+}
+
 .line-left {
-    height: 80px;
+    height: 60px;
     width: 4px;
     background-color: $main-text-color;
     margin-left: 40px;
-}
-
-.occupation {
-    margin-top: 30px;
-    @include centeredTxt();
 }
 
 .info {
     position: absolute;
     top: 25px;
     left: 150px;
+}
+
+.occupation {
+    font-size: 20.5px;
+}
+
+.about-me {
+    margin-top: 20px;
+    text-align: justify;
+    width: 86%;
+}
+
+.age {
+    position: absolute;
+    top: 50px;
+    left: 380px;
+}
+
+.github {
+    position: absolute;
+    top: 50px;
+    left: 610px;
+}
+
+@mixin link {
+    text-decoration: none;
+    color: $main-text-color;
+    cursor: pointer;
+}
+
+.github-link {
+    @include link();
+}
+
+.telegram {
+    position: absolute;
+    top: 50px;
+    left: 780px;
+}
+
+.telegram-link {
+    @include link();
+}
+
+.additional-info {
+    margin-bottom: 20px;
+    text-align: justify;
+    width: 85%;
 }

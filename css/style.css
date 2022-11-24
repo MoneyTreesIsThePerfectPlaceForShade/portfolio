@@ -15,13 +15,42 @@ body {
 
 .frame {
   border: 5px solid #f6b100;
-  height: 500px;
+  height: 550px;
   width: 950px;
   position: relative; }
 
-.name {
-  margin-top: 35px;
-  text-align: center; }
+.grid {
+  display: grid;
+  grid-template-columns: 485px 1fr 1fr;
+  grid-template-rows: 120px 1fr 1fr; }
+
+.info-grid {
+  grid-column: 1/2;
+  grid-row: 1/2; }
+
+.main-info {
+  grid-column: 1/2;
+  grid-row: 2/4;
+  margin-left: 60px; }
+
+.exp-work {
+  grid-column: 2/3;
+  grid-row: 2/4; }
+
+.photo-section {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  justify-self: center;
+  align-self: center; }
+
+.photo-margin {
+  margin-right: 30px;
+  border: 5px solid #f6b100;
+  border-radius: 140px; }
+
+.info-under-photo {
+  grid-column: 3/4;
+  grid-row: 3/4; }
 
 .line-top {
   height: 4px;
@@ -46,17 +75,84 @@ body {
   width: 4px;
   background-color: #f6b100; }
 
+.line-top-3 {
+  position: absolute;
+  top: 40px;
+  left: 500px;
+  height: 4px;
+  width: 200px;
+  background-color: #f6b100; }
+
+.line-top-3-1 {
+  position: absolute;
+  top: 40px;
+  left: 700px;
+  height: 30px;
+  width: 4px;
+  background-color: #f6b100; }
+
+.line-top-4 {
+  position: absolute;
+  top: 40px;
+  left: 731px;
+  height: 4px;
+  width: 170px;
+  background-color: #f6b100;
+  margin-right: 40px; }
+
+.line-top-4-1 {
+  position: absolute;
+  top: 40px;
+  left: 900px;
+  height: 30px;
+  width: 4px;
+  background-color: #f6b100; }
+
 .line-left {
-  height: 80px;
+  height: 60px;
   width: 4px;
   background-color: #f6b100;
   margin-left: 40px; }
-
-.occupation {
-  margin-top: 30px;
-  text-align: center; }
 
 .info {
   position: absolute;
   top: 25px;
   left: 150px; }
+
+.occupation {
+  font-size: 20.5px; }
+
+.about-me {
+  margin-top: 20px;
+  text-align: justify;
+  width: 86%; }
+
+.age {
+  position: absolute;
+  top: 50px;
+  left: 380px; }
+
+.github {
+  position: absolute;
+  top: 50px;
+  left: 610px; }
+
+.github-link {
+  text-decoration: none;
+  color: #f6b100;
+  cursor: pointer; }
+
+.telegram {
+  position: absolute;
+  top: 50px;
+  left: 780px; }
+
+.telegram-link {
+  text-decoration: none;
+  color: #f6b100;
+  cursor: pointer; }
+
+.additional-info {
+  margin-bottom: 20px;
+  text-align: justify;
+  width: 85%; }
