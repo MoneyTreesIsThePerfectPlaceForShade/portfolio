@@ -17,7 +17,9 @@
 // #1f282c
 // #20d1d6
 
-$background-color: #080404;
+// #080404
+
+$background-color: #060502ef;
 $main-text-color: #f6b100;
 
 @mixin centeredTxt {
@@ -36,17 +38,67 @@ $main-text-color: #f6b100;
 body {
     margin: 40px 40px;
     font-family: "Comfortaa", cursive;
-    background-color: $background-color;
+    background-color: #bc8d3f;
     color: $main-text-color;
+    overflow: hidden;
+
+    // font-size: 20px;
 }
 
 .frame {
-    border: 5px solid $main-text-color;
+    border: 5px solid #0d0d0b;
     // border-radius: 100px;
     height: 550px;
     width: 950px;
-
+    border-radius: 15px;
     position: relative;
+
+    background-image: radial-gradient(darken(#b88636, 30%), #111);
+    box-shadow: 0 0 5vmin 1vmin #000 inset;
+
+    overflow: hidden;
+}
+
+.frame:before {
+    animation: wave 10s infinite ease-in-out;
+    content: "";
+    height: 20vh;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+
+.frame:after {
+    background-image: linear-gradient(transparent, transparent 3px, #222);
+    background-size: 4px 4px;
+    bottom: 0;
+    content: "";
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+
+@keyframes wave {
+    0% {
+        box-shadow: 0 -10vh 20vh $main-text-color;
+        top: -100vh;
+    }
+    48%,
+    52% {
+        box-shadow: 0 -10vh 20vh darken($color: $main-text-color, $amount: 15%);
+    }
+    50% {
+        box-shadow: 0 -10vh 20vh darken($color: $main-text-color, $amount: 30%);
+    }
+    100% {
+        box-shadow: 0 -10vh 20vh $main-text-color;
+        top: 200vh;
+    }
 }
 
 .grid {
@@ -72,21 +124,25 @@ body {
 }
 
 .photo-section {
-    grid-column: 3/4;
+    grid-column: 2/4;
     grid-row: 2/3;
 
     justify-self: center;
     align-self: center;
+
+    z-index: 10;
 }
 
 .photo-margin {
-    margin-right: 30px;
     border: 5px solid $main-text-color;
     border-radius: 140px;
 }
 
 .info-under-photo {
-    grid-column: 3/4;
+    display: flex;
+    justify-content: center;
+
+    grid-column: 2/4;
     grid-row: 3/4;
 }
 
@@ -183,4 +239,23 @@ body {
     margin-bottom: 20px;
     text-align: justify;
     width: 85%;
+}
+
+.flash {
+    font-style: normal;
+    animation: colorPulse 5s infinite ease-in-out;
+}
+
+@keyframes colorPulse {
+    0%,
+    100% {
+        color: lighten($color: $main-text-color, $amount: 15%);
+    }
+    48%,
+    52% {
+        color: $main-text-color;
+    }
+    50% {
+        color: darken($color: $main-text-color, $amount: 15%);
+    }
 }
